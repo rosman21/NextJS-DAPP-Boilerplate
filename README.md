@@ -2,41 +2,18 @@
 
 This boilerplate contains the code needed to build a nextjs site using tailwind with hardhat integration. For more information on hardhat https://hardhat.org/getting-started/
 
-# Hardhat commands
+# Quick start guide
 
-Try running some of the following tasks:
+1. `yarn install`
+2. `yarn dev`
+3. in a seperate terminal run `yarn hardhat` to start a local blockchain node so you can test
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
-npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
+This app is using `@redux/toolkit` to manage some global state if you decide to build on it
 
-# Hardhat + Etherscan verification
+# Future Improvments
 
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
+I plan to create seperate branches that will use different platforms. On my list are:
 
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
-
-```shell
-hardhat run --network ropsten scripts/sample-script.ts
-```
-
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
-
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
+1. Moralis.io
+2. Tatum.io
+3. quicknode.com
